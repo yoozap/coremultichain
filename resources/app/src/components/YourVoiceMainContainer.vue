@@ -107,6 +107,7 @@ corresponding screenshots"
 
 <script>
 import TopHead from "@/components/TopHead.vue";
+import axios from "axios";
 export default {
     name: "MainContainer",
     data() {
@@ -118,6 +119,7 @@ export default {
             disabled: false,
             fileList: [],
             success: false,
+            index: 0,
 
             ruleForm: {
                 email: "",
@@ -154,20 +156,38 @@ export default {
         setTimeout(() => {
             this.firstAnimation = true;
         }, 100);
+        this.saveVoice();
     },
     methods: {
+        saveVoice () {
+
+        },
         visibilityChanged() {
             this.$store.commit("setMenuStatus", 0);
         },
         handleRemove(file) {
             // let index = this.fileList.findIndex((file = file === this.file));
-            console.log(file, this.fileList);
-            this.fileList.splice(file, 1);
+            // console.log(this.fileList);
+            // console.log(file);
+            // this.fileList.splice(index, 1);
         },
         submitForm(ruleForm) {
+            console.log(this.fileList);
             this.$refs[ruleForm].validate(valid => {
                 if (valid) {
                     this.success = true;
+                    return new Promise((resolve,reject) => {
+                        axios.post('http://localhost/coremultichain/public/api/voice', {
+                            email: this.ruleForm.email,
+                            text: this.ruleForm.desc
+                        })
+                            .then(response => {
+                                console.log(response);
+                            })
+                            .catch(response => {
+                                // List errors on response...
+                            });
+                    })
                 } else {
                     console.log("error submit!!");
                     return false;
