@@ -2,27 +2,27 @@
     <div class="body-container">
         <CareerMainContainer />
         <CareerValues />
-        <!-- <Ineligibility />
-    <Rewards />
-    <ReportBug /> -->
+        <CareerTopics />
+        <CareerSlider />
+        <CareerBenefits />
     </div>
 </template>
 
 <script>
 import CareerMainContainer from "@/components/CareerMainContainer.vue";
 import CareerValues from "@/components/CareerValues.vue";
-// import Ineligibility from "@/components/Ineligibility.vue";
-// import Rewards from "@/components/Rewards.vue";
-// import ReportBug from "@/components/ReportBug.vue";
+import CareerTopics from "@/components/CareerTopics.vue";
+import CareerSlider from "@/components/CareerSlider.vue";
+import CareerBenefits from "@/components/CareerBenefits.vue";
 
 export default {
     name: "BugBounty",
     components: {
         CareerMainContainer,
-        CareerValues
-        // Ineligibility,
-        // Rewards,
-        // ReportBug
+        CareerValues,
+        CareerTopics,
+        CareerSlider,
+        CareerBenefits
     }
 };
 </script>
