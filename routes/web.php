@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ViewController;
+use App\Http\Controllers\VoiceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,5 +14,6 @@ use App\Http\Controllers\ViewController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::any('/voice',[VoiceController::class, 'save']);
 Route::any('/{any}',[ViewController::class, 'app'])->where('any','^(?!api).*$');
+
