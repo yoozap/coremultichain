@@ -52,7 +52,7 @@ corresponding screenshots"
                 </el-form-item>
 
                 <div class="upload-label">Attachments</div>
-                <el-upload
+                <!-- <el-upload
                     action="#"
                     list-type="picture-card"
                     :auto-upload="false"
@@ -77,6 +77,19 @@ corresponding screenshots"
                             </span>
                         </span>
                     </div>
+                </el-upload>
+                <el-dialog :visible.sync="dialogVisible">
+                    <img width="100%" :src="dialogImageUrl" alt="" />
+                </el-dialog> -->
+
+                <el-upload
+                    action="#"
+                    list-type="picture-card"
+                    :on-preview="handlePictureCardPreview"
+                    :auto-upload="false"
+                    class="file-upload__container"
+                >
+                    <i class="el-icon-plus"></i>
                 </el-upload>
                 <el-dialog :visible.sync="dialogVisible">
                     <img width="100%" :src="dialogImageUrl" alt="" />
@@ -116,6 +129,7 @@ export default {
 
             dialogImageUrl: "",
             dialogVisible: false,
+
             disabled: false,
             fileList: [],
             success: false,
@@ -159,35 +173,44 @@ export default {
         this.saveVoice();
     },
     methods: {
-        saveVoice () {
-
-        },
+        saveVoice() {},
         visibilityChanged() {
             this.$store.commit("setMenuStatus", 0);
         },
-        handleRemove(file) {
-            // let index = this.fileList.findIndex((file = file === this.file));
-            // console.log(this.fileList);
-            // console.log(file);
-            // this.fileList.splice(index, 1);
+        // handleRemove(file) {
+        //     // let index = this.fileList.findIndex((file = file === this.file));
+        //     // console.log(this.fileList);
+        //     // console.log(file);
+        //     // this.fileList.splice(index, 1);
+        // },
+        // handleRemove(file, fileList) {
+        //     console.log(file, fileList);
+        // },
+        handlePictureCardPreview(file) {
+            this.dialogImageUrl = file.url;
+            this.dialogVisible = true;
         },
         submitForm(ruleForm) {
             console.log(this.fileList);
             this.$refs[ruleForm].validate(valid => {
                 if (valid) {
                     this.success = true;
-                    return new Promise((resolve,reject) => {
-                        axios.post('http://localhost/coremultichain/public/api/voice', {
-                            email: this.ruleForm.email,
-                            text: this.ruleForm.desc
-                        })
+                    return new Promise((resolve, reject) => {
+                        axios
+                            .post(
+                                "http://localhost/coremultichain/public/api/voice",
+                                {
+                                    email: this.ruleForm.email,
+                                    text: this.ruleForm.desc
+                                }
+                            )
                             .then(response => {
                                 console.log(response);
                             })
                             .catch(response => {
                                 // List errors on response...
                             });
-                    })
+                    });
                 } else {
                     console.log("error submit!!");
                     return false;
