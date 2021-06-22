@@ -5,6 +5,7 @@
         <CareerTopics />
         <CareerSlider />
         <CareerBenefits />
+        <CareerHireSteps />
     </div>
 </template>
 
@@ -14,15 +15,17 @@ import CareerValues from "@/components/CareerValues.vue";
 import CareerTopics from "@/components/CareerTopics.vue";
 import CareerSlider from "@/components/CareerSlider.vue";
 import CareerBenefits from "@/components/CareerBenefits.vue";
+import CareerHireSteps from "@/components/CareerHireSteps.vue";
 
 export default {
-    name: "BugBounty",
+    name: "Career",
     components: {
         CareerMainContainer,
         CareerValues,
         CareerTopics,
         CareerSlider,
-        CareerBenefits
+        CareerBenefits,
+        CareerHireSteps
     }
 };
 </script>

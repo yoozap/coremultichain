@@ -1,5 +1,5 @@
 <template>
-    <div class="">
+    <div class="career__values-outer">
         <div class="container">
             <div class="career__items" data-aos="fade-up">
                 <div
@@ -14,6 +14,16 @@
                 </div>
             </div>
         </div>
+
+        <div class="career-bg__outer">
+            <img
+                v-prlx="{ speed: 0.1 }"
+                :src="require(`@/assets/img/career-bg-2.png`)"
+                alt=""
+                class="career-bg"
+            />
+        </div>
+
         <div class="container">
             <div class="counter-container" data-aos="fade-up">
                 <div class="counter-item">
@@ -75,6 +85,37 @@ export default {
 </script>
 
 <style scoped>
+.career__values-outer {
+    position: relative;
+}
+.career-bg {
+    width: 100%;
+    height: 120%;
+}
+.career-bg__outer {
+    overflow: hidden;
+    position: absolute;
+    bottom: -50%;
+    right: 0px;
+    width: 100vw;
+    transition: 0.6s cubic-bezier(0.79, 0.01, 0.15, 0.99);
+}
+
+.career-bg__outer:before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 100%;
+    z-index: 2;
+    height: 25%;
+    background: rgb(0, 5, 15);
+    background: linear-gradient(
+        180deg,
+        rgba(0, 5, 15, 0) 0%,
+        rgba(0, 5, 15, 1) 100%
+    );
+}
 .career__items {
     display: flex;
     flex-wrap: wrap;
@@ -116,9 +157,7 @@ export default {
 }
 /*Ipad Pro 1024*/
 @media (max-width: 1300px) {
-    .career__items {
-        margin-top: 70px;
-    }
+
     .career_item {
         padding-right: 100px;
         margin-bottom: 70px;
@@ -149,12 +188,16 @@ export default {
 @media (max-width: 767px) {
     .career__items {
         flex-direction: column;
+        margin-top: 70px;
     }
     .career_item {
         width: 100%;
     }
     .career_item p {
         text-align: left;
+    }
+    .counter-num {
+        font-size: 22px;
     }
 }
 </style>
