@@ -14,8 +14,7 @@ class VoiceController extends Controller {
         $voice->save();
         return response()->json([
             'email' => $request->email,
-            'text' => $request->ip(),
-            'request' => $request
+            'text' => $request->ip()
         ]);
     }
 }

@@ -86,8 +86,10 @@ corresponding screenshots"
                     action="#"
                     list-type="picture-card"
                     :on-preview="handlePictureCardPreview"
+                    :on-change="saveVoice"
                     :auto-upload="false"
                     class="file-upload__container"
+                    :file-list="fileList"
                 >
                     <i class="el-icon-plus"></i>
                 </el-upload>
@@ -173,7 +175,15 @@ export default {
         this.saveVoice();
     },
     methods: {
-        saveVoice() {},
+        handlePreview(file) {
+            console.log(file);
+        },
+        handleRemove(file, fileList) {
+            console.log(file, fileList);
+        },
+        saveVoice() {
+            console.log(this.fileList);
+        },
         visibilityChanged() {
             this.$store.commit("setMenuStatus", 0);
         },
