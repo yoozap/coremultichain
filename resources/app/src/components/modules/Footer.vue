@@ -614,6 +614,12 @@ export default {
             window.addEventListener("resize", this.onResize);
             window.addEventListener("resize", this.changeActiveValue);
         });
+
+        if (this.windowWidth <= 1023) {
+            this.clickable = true;
+        } else {
+            this.active = false;
+        }
     },
     created() {
         window.addEventListener("resize", this.myEventHandler);

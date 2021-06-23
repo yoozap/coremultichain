@@ -84,12 +84,14 @@ export default {
                         "What's our secret to success? Our people. Be united by a commom DNA of talented, hardworking and passionate individuals in a world renowned team."
                 },
                 {
-                    title: "Title 2",
-                    text: "text 2"
+                    title: "What's our secret to success?",
+                    text:
+                        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam ducimus sequi ab eum. Id est iusto rerum earum enim laborum eius, sed assumenda, maxime labore possimus error eligendi nulla deserunt."
                 },
                 {
-                    title: "Title 3",
-                    text: "text 3"
+                    title: "Lorem ipsum dolor sit amet consectetur",
+                    text:
+                        "Adipisicing elit. Nam ducimus sequi ab eum. Id est iusto rerum earum enim laborum eius, sed assumenda, maxime labore possimus error eligendi nulla deserunt."
                 }
             ]
         };
@@ -100,10 +102,12 @@ export default {
 <style scoped>
 .career__slider-section {
     position: relative;
-    margin-right: 160px;
+    /* margin-right: 160px; */
     padding-top: 100px;
     margin-top: 70px;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
+    width: 100%;
+    max-width: 960px;
 }
 .career__slider-container {
     display: flex;
@@ -112,7 +116,8 @@ export default {
 .career__slider-outer {
     height: 100%;
     display: flex;
-    padding-right: 130px;
+    padding-right: 135px;
+    width: calc(100% - 95px);
 }
 .career__slider-item {
     display: flex;
@@ -134,7 +139,7 @@ export default {
 
 .slide-nav {
     display: flex;
-    margin-bottom: 60px;
+    width: 95px;
 }
 .slide-nav path {
     transition: 0.6s cubic-bezier(0.79, 0.01, 0.15, 0.99);
@@ -172,25 +177,43 @@ export default {
 @media (max-width: 1900px) {
 }
 /*Ipad 1024*/
-@media (max-width: 1365px) {
-}
+/* @media (max-width: 1365px) {
+
+} */
 /*Ipad 768*/
 @media (max-width: 1023px) {
+    .career__slider-section {
+        padding-top: 70px;
+    }
+    .career__slider-container {
+        margin-top: 30px;
+    }
+    .career__slider-outer {
+        padding-right: 50px;
+    }
     .career__slider-item {
-        padding-right: 0px;
+        padding-right: 20px;
+    }
+    .career__slider-item-title {
+        font-size: 20px;
+        line-height: 30px;
     }
 }
+
 /*Mobile 320*/
 @media (max-width: 767px) {
     .career__slider-outer {
-        height: 400px;
-    }
-    .slide-nav {
-        margin-bottom: 30px;
-        margin-top: 20px;
+        width: 100%;
+        padding-right: 20px;
     }
     .career__slider-container {
-        width: calc(100% - 120px);
+        flex-direction: column;
+    }
+    .career__slider-section .swiper-pagination {
+        display: none;
+    }
+    .slide-nav {
+        margin-top: 20px;
     }
     .career__slider-text {
         margin-bottom: 40px;
@@ -219,4 +242,5 @@ export default {
 .career__slider-section .swiper-pagination-bullet-active {
     opacity: 1;
 }
+
 </style>

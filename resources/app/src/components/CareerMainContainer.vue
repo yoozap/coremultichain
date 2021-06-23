@@ -7,12 +7,12 @@
             v-view="visibilityChanged"
         >
             <TopHead />
-            <div class="bounty-bg__outer">
+            <div class="career__bg-outer">
                 <img
                     v-prlx="{ speed: 0.1 }"
                     :src="require(`@/assets/img/career-bg.png`)"
                     alt=""
-                    class="bounty-bg"
+                    class="career__main-bg"
                 />
             </div>
             <div class="container">
@@ -69,11 +69,11 @@ export default {
 };
 </script>
 <style scoped>
-.bounty-bg {
+.career__main-bg {
     width: 100%;
     height: 120%;
 }
-.bounty-bg__outer {
+.career__bg-outer {
     overflow: hidden;
     position: absolute;
     top: 0px;
@@ -84,7 +84,7 @@ export default {
     transition: 0.6s cubic-bezier(0.79, 0.01, 0.15, 0.99);
 }
 
-.bounty-bg__outer:before {
+.career__bg-outer:before {
     position: absolute;
     bottom: 0px;
     right: 0px;
@@ -99,7 +99,7 @@ export default {
         rgba(0, 5, 15, 1) 100%
     );
 }
-.animHead .bounty-bg__outer {
+.animHead .career__bg-outer {
     opacity: 1;
     transform: translateY(-38px);
 }
@@ -167,10 +167,10 @@ export default {
     margin-top: 100px;
 }
 .career_head h2 {
-    width: 54%;
+    width: 50%;
 }
 .career_description {
-    width: 46%;
+    width: 50%;
     max-width: 416px;
     padding-top: 33px;
 }
@@ -190,7 +190,8 @@ export default {
     .main-container__description {
         padding-left: 25px;
     }
-    .main-container__description h1 {
+    .main-container__description h1,
+    .main-container__description h1 .ttl_row {
         font-size: 50px;
     }
     .main-container__description h1 .ttl_row {
@@ -224,9 +225,14 @@ export default {
         font-size: 13px;
         line-height: 22px;
     }
-    .main-container__description p {
-        font-size: 32px;
-        line-height: 40px;
+
+    .career_description {
+        padding-top: 10px;
+    }
+    .description_text {
+        font-size: 16px;
+        line-height: 24px;
+        margin-top: 30px;
     }
     .scroll-down {
         display: none;
@@ -240,7 +246,7 @@ export default {
     .protocol__link-txt {
         font-size: 10px;
     }
-    .bounty-bg__outer {
+    .career__bg-outer {
         width: 100%;
     }
     .left {
@@ -268,7 +274,10 @@ export default {
         margin-bottom: 50px;
         text-align: left;
     }
-    .bounty-bg {
+    .career_head {
+        margin-top: 50px;
+    }
+    .career__main-bg {
         height: 100vh;
         object-fit: cover;
     }
