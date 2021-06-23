@@ -547,6 +547,10 @@ export default {
                             url: "/guidelines"
                         },
                         {
+                            name: "Career",
+                            url: "/career"
+                        },
+                        {
                             name: "Privacy",
                             url: "/privacy"
                         },
@@ -566,6 +570,10 @@ export default {
                         {
                             name: "Bug Bounty",
                             url: "/bug-bounty"
+                        },
+                        {
+                            name: "Your Voice Matter",
+                            url: "/your-voice"
                         }
                     ]
                 },

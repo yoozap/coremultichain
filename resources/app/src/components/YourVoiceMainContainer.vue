@@ -51,7 +51,7 @@ corresponding screenshots"
                     ></el-input>
                 </el-form-item>
 
-                <div class="upload-label">Attachments</div>
+                <div class="upload-label" v-if="false">Attachments</div>
                 <!-- <el-upload
                     action="#"
                     list-type="picture-card"
@@ -83,6 +83,7 @@ corresponding screenshots"
                 </el-dialog> -->
 
                 <el-upload
+                    v-if="false"
                     action="#"
                     list-type="picture-card"
                     :on-preview="handlePictureCardPreview"
@@ -230,7 +231,7 @@ export default {
         resetForm(ruleForm) {
             this.$nextTick(() => {
                 this.$refs.ruleForm.resetFields();
-                this.$refs.upload.clearFiles();
+                // this.$refs.upload.clearFiles();
             });
             this.success = false;
         }
@@ -668,8 +669,8 @@ export default {
     font-size: 14px;
 }
 .feedback-form .el-button--primary:hover {
-    background-color: #010918 !important;
-    border-color: #010918 !important;
+    background-color: #ff7152 !important;
+    border-color: #ff7152 !important;
 }
 @media (max-width: 767px) {
     .feedback-form .el-form {
