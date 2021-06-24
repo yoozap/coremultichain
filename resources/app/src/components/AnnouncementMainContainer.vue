@@ -464,6 +464,7 @@ export default {
         margin-top: 115px;
         margin-bottom: 50px;
         text-align: left;
+        font-size: 38px;
     }
     .announcement-bg {
         height: 100vh;
@@ -475,6 +476,7 @@ export default {
 
     .announcement__items {
         flex-direction: column;
+        margin-top: 30px;
     }
     .announcement_item {
         width: 100%;
