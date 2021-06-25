@@ -282,6 +282,9 @@ export default {
     .generation-container__item-link{
       margin-bottom: 15px;
     }
+    .generation-outer .container{
+        overflow: hidden;
+    }
   }
   /*Ipad 768*/
   @media (max-width: 1023px){

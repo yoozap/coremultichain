@@ -547,6 +547,10 @@ export default {
                             url: "/guidelines"
                         },
                         {
+                            name: "Announcement",
+                            url: "/announcement"
+                        },
+                        {
                             name: "Career",
                             url: "/career"
                         },
