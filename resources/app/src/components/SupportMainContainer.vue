@@ -30,7 +30,7 @@
             <div class="support__items" data-aos="fade-up">
                 <div class="support_item" data-aos="fade-up">
                     <img src="../assets/img/support/megaphone.svg" alt="" />
-                    <a href="#"
+                    <router-link to="/announcement"
                         >Announcements
                         <svg
                             width="16"
@@ -46,12 +46,12 @@
                                 />
                             </g>
                         </svg>
-                    </a>
+                    </router-link>
                     <p>CORE latest official announcements and notices.</p>
                 </div>
                 <div class="support_item" data-aos="fade-up">
                     <img src="../assets/img/support/coins.svg" alt="" />
-                    <a href="#"
+                    <a target="_blank" href="https://cmcx.io/"
                         >CMCX Token
                         <svg
                             width="16"
@@ -72,7 +72,7 @@
                 </div>
                 <div class="support_item" data-aos="fade-up">
                     <img src="../assets/img/support/academy.svg" alt="" />
-                    <a href="#"
+                    <router-link to="/academy"
                         >Academy
                         <svg
                             width="16"
@@ -88,13 +88,13 @@
                                 />
                             </g>
                         </svg>
-                    </a>
+                    </router-link>
                     <p>
                         Get a deeper understanding of the crypto industry and
                         market.
                     </p>
                 </div>
-                <div class="support_item" data-aos="fade-up">
+                <div class="support_item" data-aos="fade-up" v-if="false">
                     <img src="../assets/img/support/faq.svg" alt="" />
                     <a href="#"
                         >FAQ
@@ -117,7 +117,7 @@
                 </div>
                 <div class="support_item" data-aos="fade-up">
                     <img src="../assets/img/support/submit.svg" alt="" />
-                    <a href="#"
+                    <router-link to="/your-voice"
                         >Submit a request
                         <svg
                             width="16"
@@ -133,7 +133,7 @@
                                 />
                             </g>
                         </svg>
-                    </a>
+                    </router-link>
                     <p>
                         Can't find the solution to your problem? Submit a
                         request to support team.
@@ -141,7 +141,7 @@
                 </div>
                 <div class="support_item" data-aos="fade-up">
                     <img src="../assets/img/support/api.svg" alt="" />
-                    <a href="#"
+                    <router-link to="/wiki"
                         >API Documentation
                         <svg
                             width="16"
@@ -157,7 +157,7 @@
                                 />
                             </g>
                         </svg>
-                    </a>
+                    </router-link>
                     <p>
                         All document you need when connecting to AAX by API.
                     </p>

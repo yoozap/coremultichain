@@ -2,7 +2,7 @@
     <div class="body-container">
         <CareerMainContainer />
         <CareerValues />
-        <CareerTopics />
+        <CareerTopics v-if="false"/>
         <CareerSlider />
         <CareerBenefits />
         <CareerHireSteps />

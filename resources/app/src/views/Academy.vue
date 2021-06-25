@@ -1,14 +1,14 @@
 <template>
     <div class="body-container academy-page">
         <AcademyMainContainer />
-        <AcademyTopics />
-        <AcademyReleases />
-        <AcademyTradingMaterials />
-        <AcademyTopics />
-        <AcademyEssentials />
-        <AcademyAuthors />
+        <AcademyTopics :topicNumber="1"/>
+        <AcademyReleases :itemData="$store.state.academy.releases"/>
+        <AcademyTradingMaterials :itemData="$store.state.academy.trading"/>
+        <AcademyTopics :topicNumber="2"/>
+        <AcademyEssentials :itemData="$store.state.academy.essentials"/>
+        <AcademyAuthors v-if="false"/>
         <AcademyBanner />
-        <AcademyBlockchain />
+        <AcademyBlockchain  :itemData="$store.state.academy.blockchain"/>
     </div>
 </template>
 

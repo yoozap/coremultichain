@@ -539,10 +539,6 @@ export default {
                     title: "About Us",
                     links: [
                         {
-                            name: "About",
-                            url: "/about"
-                        },
-                        {
                             name: "Brand Guidelines",
                             url: "/guidelines"
                         },
@@ -551,8 +547,12 @@ export default {
                             url: "/announcement"
                         },
                         {
-                            name: "Career",
-                            url: "/career"
+                            name: "Careers",
+                            url: "/careers"
+                        },
+                        {
+                            name: "Blog",
+                            url: "/blog"
                         },
                         {
                             name: "Privacy",
@@ -578,6 +578,10 @@ export default {
                         {
                             name: "Your Voice Matter",
                             url: "/your-voice"
+                        },
+                        {
+                            name: "Support Center",
+                            url: "/support"
                         }
                     ]
                 },
@@ -608,6 +612,14 @@ export default {
                         {
                             name: "Academy",
                             url: "/academy"
+                        },
+                        {
+                            name: "Core Wiki",
+                            url: "/wiki"
+                        },
+                        {
+                            name: "Research Areas",
+                            url: "/research-areas"
                         },
                         {
                             name: "Core Paper",

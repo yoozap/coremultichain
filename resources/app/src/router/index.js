@@ -149,8 +149,8 @@ const routes = [
         }
     },
     {
-        path: "/career",
-        name: "Career",
+        path: "/careers",
+        name: "Careers",
         component: Career,
         meta: { scrollToTop: true }
     },

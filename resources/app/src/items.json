@@ -486,7 +486,7 @@
       ]
     }
   ],
-  "blog": [
+   "blog": [
     {
       "id": 1,
       "banner": "false",
@@ -541,6 +541,361 @@
       "date": "February 23, 2021",
       "img": ""
     }
-  ]
+  ],
+    "academy": {
+        "releases": [
+            {
+                "img": "release 1.jpg",
+                "title": "What is Solana (SOL)?",
+                "level": "beginner",
+                "date": "10 h ago",
+                "minutes": "8",
+                "topics": [
+                    {
+                        "name": "cmcx"
+                    },
+                    {
+                        "name": "consensus"
+                    }
+                ]
+            },
+            {
+                "img": "release 2.jpg",
+                "title": "How to Cancel or Replace a Pending Ethereum Transaction",
+                "level": "intermediate",
+                "date": "19 may 2021",
+                "minutes": "4",
+                "topics": [
+                    {
+                        "name": "consensus"
+                    },
+                    {
+                        "name": "wallet"
+                    }
+                ]
+            },
+            {
+                "img": "release 3.jpg",
+                "title": "A Beginners Guide to Understanding Risk Management",
+                "level": "advanced",
+                "date": "19 may 2021",
+                "minutes": "8",
+                "topics": [
+                    {
+                        "name": "security"
+                    },
+                    {
+                        "name": "wallet"
+                    },
+                    {
+                        "name": "tutorials"
+                    }
+                ]
+            },
+            {
+                "img": "release 4.jpg",
+                "title": "7 Things You Should Know About NFTs",
+                "level": "beginner",
+                "date": "10 h ago",
+                "minutes": "8",
+                "topics": [
+                    {
+                        "name": "security"
+                    },
+                    {
+                        "name": "wallet"
+                    },
+                    {
+                        "name": "tutorials"
+                    }
+                ]
+            },
+            {
+                "img": "release 1.jpg",
+                "title": "What is Solana (SOL)?",
+                "level": "beginner",
+                "date": "10 h ago",
+                "minutes": "8",
+                "topics": [
+                    {
+                        "name": "security"
+                    },
+                    {
+                        "name": "wallet"
+                    },
+                    {
+                        "name": "tutorials"
+                    }
+                ]
+            }
+        ],
+        "trading": [
+            {
+                "img": "release 3.jpg",
+                "title": "What is Solana (SOL)?",
+                "level": "beginner",
+                "date": "10 h ago",
+                "minutes": "8",
+                "topics": [
+                    {
+                        "name": "security"
+                    },
+                    {
+                        "name": "wallet"
+                    },
+                    {
+                        "name": "tutorials"
+                    }
+                ]
+            },
+            {
+                "img": "release 4.jpg",
+                "title": "How to Cancel or Replace a Pending Ethereum Transaction",
+                "level": "intermediate",
+                "date": "19 may 2021",
+                "minutes": "4",
+                "topics": [
+                    {
+                        "name": "security"
+                    },
+                    {
+                        "name": "wallet"
+                    }
+                ]
+            },
+            {
+                "img": "release 1.jpg",
+                "title": "A Beginners Guide to Understanding Risk Management",
+                "level": "advanced",
+                "date": "19 may 2021",
+                "minutes": "8",
+                "topics": [
+                    {
+                        "name": "security"
+                    },
+                    {
+                        "name": "wallet"
+                    },
+                    {
+                        "name": "tutorials"
+                    }
+                ]
+            },
+            {
+                "img": "release 2.jpg",
+                "title": "7 Things You Should Know About NFTs",
+                "level": "beginner",
+                "date": "10 h ago",
+                "minutes": "8",
+                "topics": [
+                    {
+                        "name": "security"
+                    },
+                    {
+                        "name": "wallet"
+                    },
+                    {
+                        "name": "tutorials"
+                    }
+                ]
+            },
+            {
+                "img": "release 1.jpg",
+                "title": "What is Solana (SOL)?",
+                "level": "beginner",
+                "date": "10 h ago",
+                "minutes": "8",
+                "topics": [
+                    {
+                        "name": "security"
+                    },
+                    {
+                        "name": "wallet"
+                    },
+                    {
+                        "name": "tutorials"
+                    }
+                ]
+            }
+        ],
+        "essentials": [
+            {
+                "img": "release 3.jpg",
+                "title": "What is Solana (SOL)?",
+                "level": "beginner",
+                "date": "10 h ago",
+                "minutes": "8",
+                "topics": [
+                    {
+                        "name": "security"
+                    },
+                    {
+                        "name": "wallet"
+                    },
+                    {
+                        "name": "tutorials"
+                    }
+                ]
+            },
+            {
+                "img": "release 4.jpg",
+                "title": "How to Cancel or Replace a Pending Ethereum Transaction",
+                "level": "intermediate",
+                "date": "19 may 2021",
+                "minutes": "4",
+                "topics": [
+                    {
+                        "name": "security"
+                    },
+                    {
+                        "name": "wallet"
+                    }
+                ]
+            },
+            {
+                "img": "release 1.jpg",
+                "title": "A Beginners Guide to Understanding Risk Management",
+                "level": "advanced",
+                "date": "19 may 2021",
+                "minutes": "8",
+                "topics": [
+                    {
+                        "name": "security"
+                    },
+                    {
+                        "name": "wallet"
+                    },
+                    {
+                        "name": "tutorials"
+                    }
+                ]
+            },
+            {
+                "img": "release 2.jpg",
+                "title": "7 Things You Should Know About NFTs",
+                "level": "beginner",
+                "date": "10 h ago",
+                "minutes": "8",
+                "topics": [
+                    {
+                        "name": "security"
+                    },
+                    {
+                        "name": "wallet"
+                    },
+                    {
+                        "name": "tutorials"
+                    }
+                ]
+            },
+            {
+                "img": "release 1.jpg",
+                "title": "What is Solana (SOL)?",
+                "level": "beginner",
+                "date": "10 h ago",
+                "minutes": "8",
+                "topics": [
+                    {
+                        "name": "security"
+                    },
+                    {
+                        "name": "wallet"
+                    },
+                    {
+                        "name": "tutorials"
+                    }
+                ]
+            }
+        ],
+        "blockchain": [
+            {
+                "img": "release 3.jpg",
+                "title": "What is Solana (SOL)?",
+                "level": "beginner",
+                "date": "10 h ago",
+                "minutes": "8",
+                "topics": [
+                    {
+                        "name": "security"
+                    },
+                    {
+                        "name": "wallet"
+                    },
+                    {
+                        "name": "tutorials"
+                    }
+                ]
+            },
+            {
+                "img": "release 4.jpg",
+                "title": "How to Cancel or Replace a Pending Ethereum Transaction",
+                "level": "intermediate",
+                "date": "19 may 2021",
+                "minutes": "4",
+                "topics": [
+                    {
+                        "name": "security"
+                    },
+                    {
+                        "name": "wallet"
+                    }
+                ]
+            },
+            {
+                "img": "release 1.jpg",
+                "title": "A Beginners Guide to Understanding Risk Management",
+                "level": "advanced",
+                "date": "19 may 2021",
+                "minutes": "8",
+                "topics": [
+                    {
+                        "name": "security"
+                    },
+                    {
+                        "name": "wallet"
+                    },
+                    {
+                        "name": "tutorials"
+                    }
+                ]
+            },
+            {
+                "img": "release 2.jpg",
+                "title": "7 Things You Should Know About NFTs",
+                "level": "beginner",
+                "date": "10 h ago",
+                "minutes": "8",
+                "topics": [
+                    {
+                        "name": "security"
+                    },
+                    {
+                        "name": "wallet"
+                    },
+                    {
+                        "name": "tutorials"
+                    }
+                ]
+            },
+            {
+                "img": "release 1.jpg",
+                "title": "What is Solana (SOL)?",
+                "level": "beginner",
+                "date": "10 h ago",
+                "minutes": "8",
+                "topics": [
+                    {
+                        "name": "security"
+                    },
+                    {
+                        "name": "wallet"
+                    },
+                    {
+                        "name": "tutorials"
+                    }
+                ]
+            }
+        ]
+    }
 }
 
