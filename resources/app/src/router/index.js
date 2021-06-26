@@ -20,6 +20,7 @@ import Academy from "../views/Academy.vue";
 import Login from "../views/Login.vue";
 import Article from "../views/Article.vue";
 import Career from "../views/Career.vue";
+import Assets from "../views/Assets.vue";
 
 Vue.use(VueRouter);
 
@@ -151,6 +152,12 @@ const routes = [
         path: "/career",
         name: "Career",
         component: Career,
+        meta: { scrollToTop: true }
+    },
+    {
+        path: "/assets",
+        name: "Assets",
+        component: Assets,
         meta: { scrollToTop: true }
     }
 ];
