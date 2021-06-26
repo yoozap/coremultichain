@@ -7,7 +7,7 @@
                 <h1 data-aos="fade-up">faq</h1>
                 <p class="faq__teaser" data-aos="fade-up">Answers to frequently asked questions about the CORE Network.</p>
                 <div class="faq__list">
-                    <div class="faq__item" v-for="(item, index) in itemData" :key="index">
+                    <div class="faq__item" data-aos="fade-up" v-for="(item, index) in itemData" :key="index">
                         <div class="faq__item-title">{{item.question}}</div>
                         <div class="faq__item-tease">{{item.answer}}</div>
                     </div>

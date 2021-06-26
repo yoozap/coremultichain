@@ -22,6 +22,8 @@ import Article from "../views/Article.vue";
 import Career from "../views/Career.vue";
 import Announcement from "../views/Announcement.vue";
 import Faq from "../views/Faq.vue";
+import BlogInner from "../views/BlogInner.vue";
+import BlogPage from "../views/BlogPage.vue";
 
 Vue.use(VueRouter);
 
@@ -106,9 +108,21 @@ const routes = [
     },
     {
         path: "/blog",
-        name: "Blog",
-        component: Blog,
-        meta: { scrollToTop: true }
+        name: "BlogPage",
+        component: BlogPage,
+        meta: { scrollToTop: true },
+        children: [
+            {
+                // IMPORTANT - NEEDS TO BE BLANK
+                path: "",
+                name: "Blog",
+                component: Blog,
+            },
+            {   path: ":blogId",
+                name: "BlogInner", 
+                component: BlogInner 
+            },
+          ]
     },
     {
         path: "/bug-bounty",
