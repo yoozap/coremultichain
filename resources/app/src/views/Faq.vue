@@ -4,24 +4,12 @@
         <div class="container" :class="firstAnimation ? 'animHead' : ''" v-view="visibilityChanged">
             <TopHead/>
             <div class="blog">
-                <h1 data-aos="fade-up"><span>Core</span><span>Blog</span></h1>
-                <div class="blog__list">
-                    <div class="blog__item" data-aos="fade-up"
-                         :class="{banner: blog.banner == 'true'}"
-                         v-for="(blog,index) in itemData" :key="index">
-                        <div class="blog__content">
-                            <a href="#" class="blog__link" v-if="blog.banner == 'false'">{{blog.title}}</a>
-                            <h3 class="blog__link" v-if="blog.banner == 'true'">{{blog.title}}</h3>
-                            <p class="blog__text">
-                                {{blog.text}}
-                            </p>
-                            <time class="blog__date">
-                                {{blog.date}}
-                            </time>
-                        </div>
-                        <div class="blog__img" v-if="blog.banner == 'true'">
-                            <img :src="require('@/assets/img/tab1.jpg')" :alt="blog.title">
-                        </div>
+                <h1 data-aos="fade-up">faq</h1>
+                <p class="faq__teaser" data-aos="fade-up">Answers to frequently asked questions about the CORE Network.</p>
+                <div class="faq__list">
+                    <div class="faq__item" v-for="(item, index) in itemData" :key="index">
+                        <div class="faq__item-title">{{item.question}}</div>
+                        <div class="faq__item-tease">{{item.answer}}</div>
                     </div>
                 </div>
             </div>
@@ -48,7 +36,7 @@
         },
         computed:{
             itemData(){
-                return this.$store.state.blog;
+                return this.$store.state.faq;
             }
         },
         methods: {
@@ -88,113 +76,49 @@
         flex-direction: column;
         margin-bottom: 100px;
     }
-    h1 span{
-        font-size: inherit;
-        line-height: inherit;
-    }
-    h1 span:last-child{
-        padding-left: 100px;
-    }
-
-    .blog__item{
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        padding: 32px 0;
-        margin-right: 160px;
-        border-bottom: 1px solid rgba(255,255,255,0.05);
-    }
-    .blog__item:last-child{
-        border-bottom: 1px solid transparent;
-    }
-    .blog__content{
-        max-width: 840px;
-    }
-    .blog__link{
-        display: inline-flex;
-        position: relative;
-        color: #fff;
+    .faq__teaser{
         font-size: 20px;
-        line-height: 30px;
-        padding-bottom: 3px;
-        transition: 0.6s;
+        max-width: 460px;
+        color:  #fff;
     }
-    .blog__link:after{
-        content:'';
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        height: 2px;
-        background-color: #0500FF;
-        transition: 0.6s;
+    .faq__list{
+        margin-top: 100px;
+        max-width: 952px;
+        /*padding-right: 120px*/;
     }
-    .blog__text{
+    .faq__item{
         display: flex;
-        margin-top: 15px;
+        margin-bottom: 80px;
+    }
+    .faq__item:last-child{
+        margin-bottom: 0;
+    }
+    .faq__item-title{
+        width: 530px;
+        padding-right: 100px;
+        font-size: 51px;
+        line-height: 66px;
+        color: #fff;
+    }
+    .faq__item-tease{
+        flex: 1;
+        padding-top: 34px;
         font-size: 15px;
         line-height: 24px;
-        color: rgba(255,255,255,0.5);
+        color:  rgba(255,255,255,0.7);
     }
-    .blog__date{
-        display: flex;
-        margin-top: 15px;
-        font-size: 15px;
-        line-height: 24px;
-        color: rgba(255,255,255,0.5);
-    }
-    .blog__img{
-        flex: none;
-        padding-left: 40px;
-    }
-    .blog__img img{
-        display: block;
-        max-width: 220px;
-        height: auto;
-    }
-
-    /*hover*/
-    .blog__link:hover:after{
-        background-color: #FF7152;
-    }
-
-    .blog__item.banner{
-        width: calc(100% + 160px);
-        margin-left: -80px;
-        padding: 32px 80px;
-        margin-right: 0;
-        background-color: #010918;
-        border-bottom: 1px solid transparent;
-        margin-top: -1px;
-    }
-    .blog__item.banner .blog__link{
-        padding-bottom: 0;
-        color: #FF7152;
-    }
-    .blog__item.banner .blog__link:after{
-        display: none;
-    }
+    
 
     @media(max-width: 1900px){
-        .blog__item.banner{
-            width: calc(100% + 80px);
-            margin-left: -40px;
-            padding: 32px 40px;
-        }
     }
     @media(max-width: 1599px){
-        .blog__content{
-            max-width: 640px;
-        }
     }
     @media(max-width: 1300px){
-        .blog__item.banner{
-            width: calc(100% + 50px);
-            margin-left: -25px;
-            padding: 32px 25px;
-        }
-        .blog{
-            padding-bottom: 80px;
+        .faq__item-title{
+            padding-right: 40px;
+            font-size: 40px; 
+            width: 420px; 
+            line-height: 52px;
         }
     }
 
@@ -208,8 +132,11 @@
             line-height: 70px;
             margin-bottom: 50px;
         }
-        .blog__item{
-            margin-right: 0;
+        .faq__item{
+            flex-direction: column;
+        }
+        .faq__item-title{
+            padding-right: 0;
         }
     }
     /*Mobile 320*/
@@ -217,26 +144,23 @@
         .body-container{
             padding-left: 0px;
         }
-        .blog{
-            padding-bottom: 40px;
-        }
         h1 {
             font-size: 50px;
             line-height: 60px;
             margin-bottom: 30px;
             margin-top: 100px;
         }
-        .blog__item{
-            flex-direction: column-reverse;
+        .faq__item-title{
+            padding-right: 0px;
+            font-size: 26px; 
+            width: 100%; 
+            line-height: 32px;
         }
-        .blog__img{
-            padding-left: 0;
-            margin-bottom: 32px;
+        .faq__item{
+            margin-bottom: 60px;
         }
-        .blog__item.banner{
-            width: calc(100% + 30px);
-            margin-left: -15px;
-            padding: 32px 15px;
+        .faq__item-tease{
+            padding-top: 21px
         }
     }
 </style>
