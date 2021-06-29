@@ -24,6 +24,7 @@ import Announcement from "../views/Announcement.vue";
 import Faq from "../views/Faq.vue";
 import BlogInner from "../views/BlogInner.vue";
 import BlogPage from "../views/BlogPage.vue";
+import Resources from "../views/Resources.vue";
 
 Vue.use(VueRouter);
 
@@ -179,6 +180,12 @@ const routes = [
         path: "/faq",
         name: "Faq",
         component: Faq,
+        meta: { scrollToTop: true }
+    },
+    {
+        path: "/resources",
+        name: "Resources",
+        component: Resources,
         meta: { scrollToTop: true }
     }
 ];
