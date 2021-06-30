@@ -7,9 +7,9 @@
                 <h1 data-aos="fade-up" class="title">Resources</h1>
                 <p class="teaser" data-aos="fade-up">A curated list of resources about the CORE Network.</p>
                 <div class="list">
-                    <div class="item" v-for="(item, index) in 5" :key="index">
+                    <div class="item" data-aos="fade-up" v-for="(item, index) in itemData" :key="index">
                         <div class="main" @click="active = index">
-                            <span>CORE Whitepaper</span>
+                            <span>{{item.title}}</span>
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M13.7563 4.256L11.7729 6.26015L16.2357 10.723L2 10.723L2 13.533L16.2357 13.533L11.7729 17.9958L13.7563 20L21.6283 12.128L13.7563 4.256Z" fill="white"/>
                             </svg>
@@ -21,7 +21,12 @@
                             :use-hidden="false">
                             <div class="additional" :class="{active: active === index}">
                                 <div class="additional-inner">
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt blanditiis pariatur perferendis assumenda expedita hic voluptates animi. Suscipit, vitae consectetur inventore numquam velit harum dolor quo a, mollitia ratione sunt, voluptatum labore placeat facilis, perspiciatis ducimus quod magnam! Deleniti nobis voluptatibus voluptatum dolor blanditiis quae placeat harum fugit quisquam iusto.
+                                    <p>
+                                        {{item.teaser}}
+                                    </p>
+                                    <div class="links" v-if="item.links && item.links.length > 0">
+                                        <a :href="link.url" v-for="link in item.links" target="_blank" download>{{link.text}}</a>
+                                    </div>
                                 </div>
                             </div>
                         </slide-up-down>
@@ -53,7 +58,7 @@
         },
         computed:{
             itemData(){
-                return this.$store.state.faq;
+                return this.$store.state.resources;
             }
         },
         methods: {
@@ -140,8 +145,37 @@
         opacity: 1;
         transition-delay: 0.2s;
     }
-
-
+    .additional p{
+        font-size: 15px;
+        line-height: 24px;
+        color: rgba(255, 255, 255, 0.5);
+    }
+    .links{
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .links a{
+        position: relative;
+        display: inline-flex;
+        font-size: 15px;
+        margin-top: 8px;
+        padding-bottom: 3px;
+    }
+    .links a:after{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: #0500FF;
+        transition: 0.6s ease-in-out;
+    }
+    .links a:hover:after{
+        opacity: 0;
+    }
 
     @media(max-width: 1900px){
     }
