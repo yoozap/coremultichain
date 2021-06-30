@@ -25,6 +25,9 @@ import Element from "element-ui";
 import "element-ui/lib/theme-chalk/index.css";
 import axios from 'axios';
 import VueAxios from 'vue-axios';
+import VueKinesis from 'vue-kinesis'
+
+Vue.use(VueKinesis)
 Vue.use(VueAxios, axios);
 // axios.defaults.baseURL = 'http://cmcx.test';
 

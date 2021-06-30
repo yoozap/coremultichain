@@ -94,9 +94,9 @@
                         market.
                     </p>
                 </div>
-                <div class="support_item" data-aos="fade-up" v-if="false">
+                <div class="support_item" data-aos="fade-up">
                     <img src="../assets/img/support/faq.svg" alt="" />
-                    <a href="#"
+                    <router-link to="/faq"
                         >FAQ
                         <svg
                             width="16"
@@ -112,7 +112,7 @@
                                 />
                             </g>
                         </svg>
-                    </a>
+                    </router-link>
                     <p>Any issues? Find answers to commonly asked questions.</p>
                 </div>
                 <div class="support_item" data-aos="fade-up">

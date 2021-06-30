@@ -43,7 +43,7 @@
                   </div>
                   <div class="guidline__half">
                       <div class="guidline__paragraph paragraphMt">
-                          CORE uses Lack font family for online and printed communications.  It is a brave, contemporary and experimental typeface and comes in a single weight with its Italic.
+                          CORE uses <a href="">Lack font family</a> for online and printed communications.  It is a brave, contemporary and experimental typeface and comes in a single weight with its Italic.
                       </div>
                   </div>
               </div>
@@ -878,8 +878,13 @@ export default {
     font-size: 15px;
     line-height: 24px;
     color: rgba(255,255,255,.5);
-    display: flex;
     padding-right: 100px;
+    }
+    .guidline__paragraph a{
+        transition: .6s cubic-bezier(0.79, 0.01, 0.15, 0.99);
+    }
+    .guidline__paragraph a:hover{
+        color: #ff7152;
     }
     .guidline__ltl-ttl{
     font-size: 20px;

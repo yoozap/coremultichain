@@ -4,7 +4,7 @@
         <div class="container" :class="firstAnimation ? 'animHead' : ''" v-view="visibilityChanged">
             <TopHead/>
             <div class="blog">
-                <h1 data-aos="fade-up">faq</h1>
+                <h1 data-aos="fade-up">Faq</h1>
                 <p class="faq__teaser" data-aos="fade-up">Answers to frequently asked questions about the CORE Network.</p>
                 <div class="faq__list">
                     <div class="faq__item" data-aos="fade-up" v-for="(item, index) in itemData" :key="index">
@@ -107,7 +107,7 @@
         line-height: 24px;
         color:  rgba(255,255,255,0.7);
     }
-    
+
 
     @media(max-width: 1900px){
     }
@@ -116,8 +116,8 @@
     @media(max-width: 1300px){
         .faq__item-title{
             padding-right: 40px;
-            font-size: 40px; 
-            width: 420px; 
+            font-size: 40px;
+            width: 420px;
             line-height: 52px;
         }
     }
@@ -152,8 +152,8 @@
         }
         .faq__item-title{
             padding-right: 0px;
-            font-size: 26px; 
-            width: 100%; 
+            font-size: 26px;
+            width: 100%;
             line-height: 32px;
         }
         .faq__item{
