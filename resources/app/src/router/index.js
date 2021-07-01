@@ -25,6 +25,7 @@ import Faq from "../views/Faq.vue";
 import BlogInner from "../views/BlogInner.vue";
 import BlogPage from "../views/BlogPage.vue";
 import Resources from "../views/Resources.vue";
+import Gravity from "../views/Gravity.vue";
 
 Vue.use(VueRouter);
 
@@ -117,13 +118,10 @@ const routes = [
                 // IMPORTANT - NEEDS TO BE BLANK
                 path: "",
                 name: "Blog",
-                component: Blog,
+                component: Blog
             },
-            {   path: ":blogId",
-                name: "BlogInner", 
-                component: BlogInner 
-            },
-          ]
+            { path: ":blogId", name: "BlogInner", component: BlogInner }
+        ]
     },
     {
         path: "/bug-bounty",
@@ -186,6 +184,12 @@ const routes = [
         path: "/resources",
         name: "Resources",
         component: Resources,
+        meta: { scrollToTop: true }
+    },
+    {
+        path: "/gravity",
+        name: "Gravity",
+        component: Gravity,
         meta: { scrollToTop: true }
     }
 ];
