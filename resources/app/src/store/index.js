@@ -9,6 +9,7 @@ export default new Vuex.Store({
     navMenu: items.navigation,
     community: items.community,
     faq: items.faq,
+    resources: items.resources,
     wiki: items.wiki,
     blog: items.blog,
     communityNum: 0,
