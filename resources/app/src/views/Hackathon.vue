@@ -8,7 +8,7 @@
                   <span>CORE</span>
                   <span>Hackathon</span>
                 </h1>
-                <div class="head">
+                <div class="head" data-aos="fade-up">
                   <p class="teaser" data-aos="fade-up">
                     Global Virtual Hackathon, Startup Competition
                     and Accelerator Program to Spotlight the Next
@@ -18,12 +18,12 @@
                     <span>Submit Now</span>
                   </button>
                 </div>
-                <time class="date">
+                <time class="date" data-aos="fade-up">
                   <span>Aug 8 — Apr 7, 2021</span>
                   <span>11:45 PM</span>
                 </time>
 
-                <div class="highlights">
+                <div class="highlights" data-aos="fade-up">
                   <h2 class="ttl">Highlights</h2>
                   <div class="list">
                     <div class="highlight" v-for="item in 4">
@@ -42,7 +42,7 @@
                   </div>
                 </div>
 
-                <div class="event">
+                <div class="event" data-aos="fade-up">
                   <h2 class="ttl">Kick-off Event</h2>
                   <div class="content">
                     <p class="text">
@@ -58,16 +58,10 @@
                   </div>
                 </div>
 
-                <div class="speakers">
-                  <div v-swiper:speakers="speakersOption">
-                    <div class="swiper-wrapper">
-                      <div class="swiper-slide" :key="speaker" v-for="speaker in 10">
-                        {{speaker}}
-                      </div>
-                    </div>
-                    <div class="swiper-pagination"></div>
-                  </div>
-                </div>
+                <MainSlider data-aos="fade-up"/>
+
+                <IconsSlider data-aos="fade-up"/>
+
             </div>
         </div>
     </div>
@@ -75,18 +69,26 @@
 
 <script>
     import TopHead from '../components/TopHead'
+    import MainSlider from '../components/sliders/MainSlider'
+    import IconsSlider from '../components/sliders/IconsSlider'
     export default {
         name: 'Faq',
         components: {
-            TopHead
+            TopHead,
+            MainSlider,
+            IconsSlider
         },
         data () {
             return {
                 firstAnimation: false,
                 speakersOption: {
-                  pagination: {
-                    el: '.swiper-pagination'
-                  },
+                    slidesPerView: 'auto',
+                    spaceBetween: 32,
+                    speed: 800,
+                    navigation: {
+                        nextEl: '.speakers-button-next',
+                        prevEl: '.speakers-button-prev',
+                    },
                 }
             }
         },
@@ -129,6 +131,10 @@
         background: rgb(255,255,255);
         background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(0,5,15,0.3) 30%);
     }
+    .hackathon{
+        overflow: hidden;
+        width: 100%;
+    }
     .title{
         font-size: 100px;
         line-height: 110px;
@@ -148,6 +154,7 @@
       color: #fff;
       padding-left: 130px;
     }
+
     .head{
       display: flex;
       justify-content: space-between;
@@ -185,6 +192,7 @@
     .head .submit{
       margin-top: 20px;
     }
+
     .date{
       display: flex;
       flex-direction: column;
@@ -199,6 +207,7 @@
     .date span:first-child{
       margin-top: 0;
     }
+
     .highlights{
       margin-top: 140px;
       width: 845px;
@@ -237,6 +246,7 @@
       line-height: 30px;
       color: #fff;
     }
+
     .event{
       margin-top: 140px;
       display: flex;
@@ -282,37 +292,6 @@
       content: '';
     }
 
-    .faq__teaser{
-        font-size: 20px;
-        max-width: 460px;
-        color:  #fff;
-    }
-    .faq__list{
-        margin-top: 100px;
-        max-width: 952px;
-        /*padding-right: 120px*/;
-    }
-    .faq__item{
-        display: flex;
-        margin-bottom: 80px;
-    }
-    .faq__item:last-child{
-        margin-bottom: 0;
-    }
-    .faq__item-title{
-        width: 530px;
-        padding-right: 100px;
-        font-size: 51px;
-        line-height: 66px;
-        color: #fff;
-    }
-    .faq__item-tease{
-        flex: 1;
-        padding-top: 34px;
-        font-size: 15px;
-        line-height: 24px;
-        color:  rgba(255,255,255,0.7);
-    }
 
 
     @media(max-width: 1900px){
@@ -320,12 +299,6 @@
     @media(max-width: 1599px){
     }
     @media(max-width: 1300px){
-        .faq__item-title{
-            padding-right: 40px;
-            font-size: 40px;
-            width: 420px;
-            line-height: 52px;
-        }
     }
 
     /*Ipad 768*/
@@ -338,12 +311,6 @@
             line-height: 70px;
             margin-bottom: 50px;
         }
-        .faq__item{
-            flex-direction: column;
-        }
-        .faq__item-title{
-            padding-right: 0;
-        }
     }
     /*Mobile 320*/
     @media (max-width: 767px){
@@ -355,18 +322,6 @@
             line-height: 60px;
             margin-bottom: 30px;
             margin-top: 100px;
-        }
-        .faq__item-title{
-            padding-right: 0px;
-            font-size: 26px;
-            width: 100%;
-            line-height: 32px;
-        }
-        .faq__item{
-            margin-bottom: 60px;
-        }
-        .faq__item-tease{
-            padding-top: 21px
         }
     }
 </style>
