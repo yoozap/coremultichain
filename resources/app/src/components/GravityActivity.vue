@@ -16,7 +16,7 @@
             </div>
 
             <div class="activity__tab-content">
-                <div class="tr tr-head">
+                <div class="tr tr-head fixed-table-item">
                     <div class="td">game</div>
                     <div class="td">user</div>
                     <div class="td">time</div>
@@ -26,7 +26,7 @@
                 </div>
 
                 <div
-                    class="tr tr-body"
+                    class="tr tr-body fixed-table-item"
                     v-for="(item, index) in list"
                     :key="index"
                 >
@@ -53,6 +53,7 @@ export default {
     data() {
         return {
             active: 0,
+
             tabs: [
                 {
                     name: "My Bets"
@@ -225,6 +226,11 @@ export default {
         activate(index) {
             this.active = index;
         }
+    },
+    computed: {
+        swiper() {
+            return this.$refs.mySwiper.$swiper;
+        }
     }
 };
 </script>
@@ -258,6 +264,14 @@ export default {
 .activity__tabs::-webkit-scrollbar {
     display: none;
 }
+.activity__tab-content {
+    overflow-x: auto;
+    width: 100%;
+}
+.activity__tab-content::-webkit-scrollbar {
+    height: 5px;
+}
+
 .activity__tab {
     position: relative;
     display: flex;
@@ -279,6 +293,7 @@ export default {
 .tab_name {
     opacity: 0.5;
     transition: 0.6s cubic-bezier(0.79, 0.01, 0.15, 0.99);
+    white-space: nowrap;
 }
 .activity__tab:hover .tab_name {
     opacity: 1;
@@ -303,27 +318,33 @@ export default {
 
 .td:first-child {
     width: 14.39%;
+    min-width: 137px;
 }
 .td:nth-child(2) {
     width: 20.27%;
+    min-width: 193px;
 }
 .td:nth-child(3) {
     width: 7.92%;
+    min-width: 65px;
 }
 .td:nth-child(4) {
     display: flex;
     align-items: center;
     justify-content: flex-end;
     width: 14.68%;
+    min-width: 150px;
 }
 .td:nth-child(5) {
     width: 15.12%;
+    min-width: 144px;
 }
 .td:nth-child(6) {
     display: flex;
     align-items: center;
     justify-content: flex-end;
     width: 27.62%;
+    min-width: 263px;
 }
 .tr-body .td:nth-child(6) {
     color: #46ce64;
@@ -338,5 +359,16 @@ export default {
 .td:nth-child(5),
 .td:nth-child(6) {
     text-align: right;
+}
+
+@media (max-width: 767px) {
+    /* .td:first-child,
+    .td:nth-child(2),
+    .td:nth-child(3),
+    .td:nth-child(4),
+    .td:nth-child(5),
+    .td:nth-child(6) {
+        width: max-content;
+    } */
 }
 </style>
