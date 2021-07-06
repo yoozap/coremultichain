@@ -7,6 +7,7 @@
         <GravityFinance />
         <GravitySocial />
         <GravityOther />
+        <GravityActivity />
     </div>
 </template>
 
@@ -18,6 +19,7 @@ import GravityMarketplaces from "@/components/GravityMarketplaces.vue";
 import GravityFinance from "@/components/GravityFinance.vue";
 import GravitySocial from "@/components/GravitySocial.vue";
 import GravityOther from "@/components/GravityOther.vue";
+import GravityActivity from "@/components/GravityActivity.vue";
 
 export default {
     name: "Support",
@@ -28,7 +30,8 @@ export default {
         GravityMarketplaces,
         GravityFinance,
         GravitySocial,
-        GravityOther
+        GravityOther,
+        GravityActivity
     }
 };
 </script>

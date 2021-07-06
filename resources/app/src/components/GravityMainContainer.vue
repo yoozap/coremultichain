@@ -293,6 +293,9 @@ export default {
     opacity: 0.5;
     transition: 0.6s cubic-bezier(0.79, 0.01, 0.15, 0.99);
 }
+.gravity__tab:hover .tab_name {
+    opacity: 1;
+}
 .gravity__tab.active::after {
     transform: scale(1);
 }
