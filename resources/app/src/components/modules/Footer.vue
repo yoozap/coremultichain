@@ -551,6 +551,10 @@ export default {
                             url: "/careers"
                         },
                         {
+                            name: "Resources",
+                            url: "/resources"
+                        },
+                        {
                             name: "Blog",
                             url: "/blog"
                         },
