@@ -72,39 +72,39 @@
         width: 100%;
         max-width: 952px;
     }
-    .slider .top{
+    .top{
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
         margin-bottom: 60px;
     }
-    .slider .top .ttl{
+    .top .ttl{
         font-size: 51px;
         line-height: 66px;
         color: #fff;
         padding-right: 55px;
     }
-    .slider .btns{
+    .btns{
         display: flex;
         align-items: center;
     }
-    .slider .btns > div{
+    .btns > div{
         cursor: pointer;
     }
-    .slider .btns > div:first-child{
+    .btns > div:first-child{
         margin-right: 18px;
     }
-    .slider .swiper-container{
+    .swiper-container{
         overflow: visible;
     }
-    .slider .slide{
+    .slide{
         cursor: pointer;
     }
-    .slider .img-box{
+    .img-box{
         position: relative;
         padding-top: 59%;
     }
-    .slider .img-box img{
+    .img-box img{
         position: absolute;
         top: 0;
         left: 0;
@@ -112,7 +112,7 @@
         height: 100%;
         object-fit: cover;
     }
-    .slider .bottom{
+    .bottom{
         margin-top: 24px;
         display: flex;
         justify-content: space-between;
@@ -120,20 +120,53 @@
         transition: 0.6s;
         transform: translateY(10px);
     }
-    .slider .swiper-slide-active .bottom{
+    .swiper-slide-active .bottom{
         opacity: 1;
         transform: translateY(0px);
     }
-    .slider .bottom .ttl{
+    .bottom .ttl{
         font-size: 20px;
         color: #fff;
         margin-right: 80px;
     }
-    .slider .bottom p{
+    .bottom p{
         max-width: 416px;
         margin-top: 5px;
         font-size: 15px;
         line-height: 24px;
         color: rgba(255, 255, 255, 0.7);
+    }
+
+    @media(max-width: 1300px){
+        .slider{
+            margin-top: 100px;
+        }
+        .top .ttl{
+            font-size: 38px;
+            line-height: 48px;
+        } 
+    }
+    @media (max-width: 1023px){
+        .top .ttl{
+            font-size: 28px;
+            line-height: 48px;  
+        } 
+    }
+    @media(max-width: 767px){
+        .slider{
+            margin-top: 80px;
+        }
+        .bottom .ttl{
+            font-size: 16px;
+            color: #fff;
+            margin-right: 20px;
+        }
+        .bottom p{
+            font-size: 12px;
+            line-height: 18px;
+        }
+        .top{
+            margin-bottom: 40px;
+        }
     }
 </style>

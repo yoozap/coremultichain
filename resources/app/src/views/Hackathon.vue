@@ -62,6 +62,12 @@
 
                 <IconsSlider data-aos="fade-up"/>
 
+               <!--  <Faq :itemData="$store.state.faq"/> -->
+               <div class="bottom">
+                 <button class="submit">
+                    <span>Submit Now</span>
+                  </button>
+               </div>
             </div>
         </div>
     </div>
@@ -71,12 +77,14 @@
     import TopHead from '../components/TopHead'
     import MainSlider from '../components/sliders/MainSlider'
     import IconsSlider from '../components/sliders/IconsSlider'
+    import Faq from '../components/Faq'
     export default {
         name: 'Faq',
         components: {
             TopHead,
             MainSlider,
-            IconsSlider
+            IconsSlider,
+            Faq
         },
         data () {
             return {
@@ -134,6 +142,12 @@
     .hackathon{
         overflow: hidden;
         width: 100%;
+        padding-bottom: 100px;
+    }
+    .hackathon > .bottom{
+      display: flex;
+      justify-content: center;
+      margin-top: 140px;
     }
     .title{
         font-size: 100px;
@@ -210,7 +224,8 @@
 
     .highlights{
       margin-top: 140px;
-      width: 845px;
+      width: 100%;
+      max-width: 845px;
     }
     .highlights .ttl{
       font-size: 51px;
@@ -222,6 +237,7 @@
       flex-wrap: wrap;
     }
     .highlight{
+      width: 100%;
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
@@ -261,7 +277,8 @@
     }
     .event .content{
       flex: none;
-      width: 416px;
+      width: 100%;
+      max-width: 416px;
       padding-top: 34px;
     }
     .event .content p{
@@ -299,6 +316,26 @@
     @media(max-width: 1599px){
     }
     @media(max-width: 1300px){
+      .title span:nth-child(2),
+      .title span:nth-child(1){
+        font-size: 50px;
+        line-height: 60px;
+      }
+      .title span:nth-child(2){
+        padding-left: 65px;
+      }
+      .highlight{
+        margin-right: 60px;
+      }
+      .highlights,
+      .event{
+        margin-top: 100px
+      }
+      .highlights .ttl,
+      .event .ttl{
+        font-size: 38px;
+        line-height: 48px;
+      }
     }
 
     /*Ipad 768*/
@@ -306,10 +343,24 @@
         .body-container{
             padding-left: 180px;
         }
-        h1{
-            font-size: 60px;
-            line-height: 70px;
-            margin-bottom: 50px;
+        .highlights .ttl,
+        .event .ttl{
+          font-size: 28px;
+          line-height: 48px;
+        }
+        .highlight{
+          width: 102px;
+          margin-right: 30px;
+        }
+        .highlight span{
+          font-size: 16px;
+          line-height: 22px;
+        }
+        .event{
+          flex-direction: column;
+        }
+        .event .ttl{
+          padding-right: 0px;
         }
     }
     /*Mobile 320*/
@@ -317,11 +368,30 @@
         .body-container{
             padding-left: 0px;
         }
-        h1 {
-            font-size: 50px;
-            line-height: 60px;
-            margin-bottom: 30px;
-            margin-top: 100px;
+        .title span:nth-child(2),
+        .title span:nth-child(1){
+          font-size: 34px;
+          line-height: 45px;
+        }
+        .title span:nth-child(2){
+          padding-left: 30px;
+        }
+        .head{
+          flex-direction: column;
+        }
+        .head p{
+          padding-right: 0px;
+        }
+        .head .submit{
+          margin-top: 30px
+        }
+        .date span{
+          font-size: 21px;
+          line-height: 32px;
+        }
+        .highlights,
+        .event{
+          margin-top: 80px;
         }
     }
 </style>

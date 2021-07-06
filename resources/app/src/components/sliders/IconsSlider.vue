@@ -40,6 +40,14 @@
                         nextEl: '.slider-button-next',
                         prevEl: '.slider-button-prev',
                     },
+                    breakpoints: {
+                        0: {
+                         spaceBetween: 40,
+                        },
+                        768: {
+                          spaceBetween: 100,
+                        },
+                    }
                 }
             }
         },
@@ -65,5 +73,29 @@
         color: #fff;
         padding-right: 55px;
         margin-bottom: 60px;
+    }
+
+    @media(max-width: 1300px){
+        .slider{
+            margin-top: 100px;
+        }
+        .ttl{
+            font-size: 38px;
+            line-height: 48px;  
+        } 
+    }
+    @media (max-width: 1023px){
+        .ttl{
+            font-size: 28px;
+            line-height: 48px;  
+        } 
+    }
+    @media(max-width: 767px){
+        .slider{
+            margin-top: 80px;
+        }
+        .ttl{
+            margin-bottom: 40px;
+        }
     }
 </style>
