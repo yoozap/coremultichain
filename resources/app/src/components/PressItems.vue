@@ -280,5 +280,10 @@ export default {
     .press__column-right {
         width: 100%;
     }
+    .press__column-right {
+        padding-top: 50px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        margin-top: 30px;
+    }
 }
 </style>
