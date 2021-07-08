@@ -240,7 +240,7 @@ export default {
     border-top: 1px solid #111826;
 }
 .press_item.right .img_box {
-    padding-top: 47%;
+    padding-top: 65%;
 }
 .press_item.right .press_ttl {
     font-size: 20px;
