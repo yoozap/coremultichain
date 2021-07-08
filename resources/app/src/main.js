@@ -23,15 +23,13 @@ import Meta from "vue-meta";
 import CloudflareVideoPlayer from "vue-cloudflare-video-player";
 import Element from "element-ui";
 import "element-ui/lib/theme-chalk/index.css";
-import axios from 'axios';
-import VueAxios from 'vue-axios';
-import VueKinesis from 'vue-kinesis'
+import axios from "axios";
+import VueAxios from "vue-axios";
+import VueKinesis from "vue-kinesis";
 
-Vue.use(VueKinesis)
+Vue.use(VueKinesis);
 Vue.use(VueAxios, axios);
 // axios.defaults.baseURL = 'http://cmcx.test';
-
-
 
 Vue.use(CloudflareVideoPlayer);
 Vue.use(Meta);
@@ -41,13 +39,13 @@ Vue.use(vClickOutside);
 Vue.use(Clipboard);
 
 Vue.use(VueMq, {
-  breakpoints: {
-    phone: 768,
-    tablet: 1023,
-    md: 1366,
-    lg: 1367
-  },
-  defaultBreakpoint: "sm" // customize this for SSR
+    breakpoints: {
+        phone: 768,
+        tablet: 1023,
+        md: 1366,
+        lg: 1367
+    },
+    defaultBreakpoint: "sm" // customize this for SSR
 });
 
 Vue.use(VueScrollactive);
@@ -67,14 +65,14 @@ Swiper.use([Navigation, Pagination]);
 Vue.config.productionTip = false;
 
 Vue.use(VueSmoothScroll, {
-  duration: 400,
-  updateHistory: false
+    duration: 400,
+    updateHistory: false
 });
 
 Vue.use(Element);
 
 new Vue({
-  router,
-  store,
-  render: h => h(App)
+    router,
+    store,
+    render: h => h(App)
 }).$mount("#app");

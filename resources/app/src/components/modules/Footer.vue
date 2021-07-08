@@ -757,7 +757,8 @@ export default {
 .community-page ~ .footer__main .join_container.container,
 .proposal-page ~ .footer__main .join_container.container,
 .academy-page ~ .footer__main .join_container.container,
-.article-page ~ .footer__main .join_container.container {
+.article-page ~ .footer__main .join_container.container,
+.press-page ~ .footer__main .join_container.container {
     display: flex;
 }
 
