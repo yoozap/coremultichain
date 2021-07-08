@@ -216,7 +216,8 @@ export default {
     line-height: 24px;
     margin-top: 16px;
 }
-.press_item.main .press_icon {
+.press_item.main .press_icon,
+.press_item.right .press_icon {
     position: absolute;
     top: -16px;
     left: 16px;
