@@ -27,6 +27,7 @@ import BlogPage from "../views/BlogPage.vue";
 import Resources from "../views/Resources.vue";
 import Hackathon from "../views/Hackathon.vue";
 import Events from "../views/Events.vue";
+import Press from "../views/Press.vue";
 
 Vue.use(VueRouter);
 
@@ -125,7 +126,7 @@ const routes = [
                 name: "BlogInner",
                 component: BlogInner
             },
-          ]
+        ]
     },
     {
         path: "/bug-bounty",
@@ -202,6 +203,12 @@ const routes = [
         component: Events,
         meta: { scrollToTop: true }
     },
+    {
+        path: "/press",
+        name: "Press",
+        component: Press,
+        meta: { scrollToTop: true }
+    }
 ];
 
 const router = new VueRouter({
