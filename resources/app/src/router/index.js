@@ -26,6 +26,7 @@ import BlogInner from "../views/BlogInner.vue";
 import BlogPage from "../views/BlogPage.vue";
 import Resources from "../views/Resources.vue";
 import Hackathon from "../views/Hackathon.vue";
+import Events from "../views/Events.vue";
 
 Vue.use(VueRouter);
 
@@ -121,8 +122,8 @@ const routes = [
                 component: Blog,
             },
             {   path: ":blogId",
-                name: "BlogInner", 
-                component: BlogInner 
+                name: "BlogInner",
+                component: BlogInner
             },
           ]
     },
@@ -193,6 +194,12 @@ const routes = [
         path: "/hackathon",
         name: "Hackathon",
         component: Hackathon,
+        meta: { scrollToTop: true }
+    },
+    {
+        path: "/events",
+        name: "Events",
+        component: Events,
         meta: { scrollToTop: true }
     },
 ];
