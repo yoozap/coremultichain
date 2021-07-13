@@ -634,6 +634,10 @@ export default {
                             url: "/hackathon"
                         },
                         {
+                            name: "Gravity",
+                            url: "/gravity"
+                        },
+                        {
                             name: "Research Areas",
                             url: "/research-areas"
                         },

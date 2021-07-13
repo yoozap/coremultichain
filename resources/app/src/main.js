@@ -5,7 +5,7 @@ import router from "./router";
 import store from "./store";
 import "./assets/css/main.css";
 import VueAwesomeSwiper from "vue-awesome-swiper";
-import Swiper, { Navigation, Pagination } from "swiper";
+import Swiper, { Navigation, Pagination, Scrollbar } from "swiper";
 import "swiper/swiper-bundle.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -61,7 +61,7 @@ Vue.use(checkView);
 AOS.init();
 
 Vue.use(VueAwesomeSwiper);
-Swiper.use([Navigation, Pagination]);
+Swiper.use([Navigation, Pagination, Scrollbar]);
 Vue.config.productionTip = false;
 
 Vue.use(VueSmoothScroll, {

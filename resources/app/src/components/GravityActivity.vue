@@ -226,6 +226,11 @@ export default {
         activate(index) {
             this.active = index;
         }
+    },
+    computed: {
+        swiper() {
+            return this.$refs.mySwiper.$swiper;
+        }
     }
 };
 </script>
@@ -354,5 +359,17 @@ export default {
 .td:nth-child(5),
 .td:nth-child(6) {
     text-align: right;
+}
+
+
+@media (max-width: 767px) {
+    /* .td:first-child,
+    .td:nth-child(2),
+    .td:nth-child(3),
+    .td:nth-child(4),
+    .td:nth-child(5),
+    .td:nth-child(6) {
+        width: max-content;
+    } */
 }
 </style>
