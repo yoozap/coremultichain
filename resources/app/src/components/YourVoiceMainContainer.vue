@@ -32,7 +32,7 @@
             </div>
         </div>
         <div class="container feedback-form" data-aos="fade-up">
-            <el-form ref="ruleForm" :model="ruleForm" :rules="rules">
+            <el-form ref="ruleForm" :model="ruleForm" :rules="rules" @submit.prevent="sendEmail">
                 <el-form-item label="Email" prop="email">
                     <el-input
                         type="email"
@@ -98,7 +98,7 @@ corresponding screenshots"
                 </el-dialog>
 
                 <el-form-item>
-                    <el-button type="primary" @click="submitForm('ruleForm')"
+                    <el-button type="submit"
                         >Submit</el-button
                     >
                 </el-form-item>
@@ -123,6 +123,7 @@ corresponding screenshots"
 <script>
 import TopHead from "@/components/TopHead.vue";
 import axios from "axios";
+import emailjs from "emailjs-com";
 export default {
     name: "MainContainer",
     data() {
@@ -175,6 +176,37 @@ export default {
         this.saveVoice();
     },
     methods: {
+        sendEmail(e) {
+            if (this.email === "" ? "" : this.reg.test(this.email)) {
+                emailjs
+                    .sendForm(
+                        "service_rujm9q4",
+                        "template_cchs8v6",
+                        e.target,
+                        "user_Qs2I51OEYXof09TBn8gHY",
+                        {
+                            email: this.ruleForm.email,
+                            message: this.ruleForm.desc
+                        }
+                    )
+                    .then(
+                        result => {
+                            this.$store.commit("setSuccess", true);
+                            console.log("SUCCESS!", result.status, result.text);
+                        },
+                        error => {
+                            console.log("FAILED...", error);
+                        }
+                    );
+                // Reset form field
+                this.email = "";
+            } else {
+                this.success = false;
+                setTimeout(() => {
+                    this.success = true;
+                }, 5000);
+            }
+        },
         handlePreview(file) {
             console.log(file);
         },

@@ -659,7 +659,7 @@
       "editor": "<h1>blog 7</h1><br><br><br><p>Your one-stop guide to all things crypto. Whether you're a rookie trying to understand mining or a veteran looking to develop a trading strategy, we've got you covered.</p><br><br><br><img src='/img/release 2.883fd07b.jpg'><br><br><h2>introduction</h2><br><p>First of all, keep in mind that you cannot replace, revert or cancel transactions that have already been confirmed. However, during periods of network congestion, some cryptocurrency transactions may get stuck. When the volume of transactions is too high, you could find yourself with a transaction pending for hours or even days. In this guide, we will show you how to speed up transactions using MetaMask or Trust Wallet. You could also use other crypto wallets that support the Ethereum blockchain, but the process might be slightly different.</p><br><br><br><h2>Requirements</h2><br><ul><li>MetaMask or Trust Wallet installed.</li><li>Private keys (seed phrase) to log in to your Ethereum wallet.</li><li>Internet access.</li></ul><br><br><h2>How to speed up a transaction on MetaMask</h2><br><br><ol><li>Log in to your MetaMask wallet that has the pending transaction. If it's an external wallet, you need to import the address using the corresponding seed phrase or private key.</li><li>Find the pending transaction under the [Activity] tab and click on [Speed Up].</li><li>This process will allow you to broadcast your transaction again. Make sure to use a higher gas price by clicking on [Fast] and then [Save].</li><li>If the previous step didn't work, you could also go to the [Advanced] tab to set the gas price manually. You can check the current gas prices and average confirmation time on Etherscan or EthGasStation.</li></ol>"
     }
   ],
-    "academy": {
+   "academy": {
         "releases": [
             {
                 "img": "release 1.jpg",
@@ -1013,6 +1013,62 @@
                 ]
             }
         ]
-    }
+    },
+   "ecosystem": [
+       {
+           "id": 1,
+           "url": "https://www.okex.com/",
+           "title": "OKEX",
+           "text": "One of the world's leading crypto exchanges, listed SOL on September 30th, 2020.",
+           "image": "okex.svg",
+           "color": "#163583",
+           "types": ["exchange"]
+       },
+       {
+           "id": 2,
+           "url": "https://p2pb2b.io/",
+           "title": "P2PB2B",
+           "text": "The platform includes all the necessary tools to make your trading even more convenient and safe.",
+           "image": "p2pb2b.svg",
+           "color": "#269B63",
+           "types": ["exchange","dex","amm"]
+       },
+       {
+           "id": 3,
+           "url": "https://vindax.com/",
+           "title": "Vindax",
+           "text": "Cryptocurrencies and blockchain assets with wider audience using a beautifully designed user interface and intuitive trading technology.",
+           "image": "vindax.svg",
+           "color": "#202635",
+           "types": ["exchange","dex","amm"]
+       },
+       {
+           "id": 4,
+           "url": "https://aofex.com/",
+           "title": "Aofex",
+           "text": "Global Leading Service Platform of Digital Assets with Security.",
+           "image": "aofex.svg",
+           "color": "#FD5B2C",
+           "types": ["exchange"]
+       },
+       {
+           "id": 5,
+           "url": "https://www.lbank.info/",
+           "title": "Lbank",
+           "text": "The World Class Digital Asset Exchange.",
+           "image": "lbank.svg",
+           "color": "#40404C",
+           "types": ["exchange","dex","amm"]
+       },
+       {
+           "id": 6,
+           "url": "https://www.coinex.com/",
+           "title": "CoinEx",
+           "text": "The Global Digital Coin Exchange.",
+           "image": "coinex.svg",
+           "color": "#099F94",
+           "types": ["exchange"]
+       }
+   ]
 }
 
